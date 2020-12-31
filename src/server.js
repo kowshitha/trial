@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const user = require('./routers/user');
-const db = "mongodb+srv://kowshi_20:hello@cluster0.cs1vo.mongodb.net/restapii?retryWrites=true&w=majority";
-const port = 2000;
+const user = require('./routers/user.js');
+const db ="mongodb+srv://kowshitha:kowshi@cluster0.cs1vo.mongodb.net/rest?retryWrites=true&w=majority";
+const port = 5000;
 const app = express();
 app.use(express.json())
 mongoose.connect(db,{
@@ -14,9 +14,9 @@ mongoose.connect(db,{
 }).catch((err)=>{
     console.log({err: err });
 })
-app.get('/',(req,res)=>{
-    res.send("hello")
-    })
+//app.get('/',(req,res)=>{
+    //res.send("hello")
+    //})
     app.use('/users',user);
     app.listen(port,(err)=>{
         if(err){
@@ -24,4 +24,3 @@ app.get('/',(req,res)=>{
         }
         console.log("server running on port" +port);
         });
-
