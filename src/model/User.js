@@ -1,11 +1,15 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const userSchema = new Schema({
-    username:{
+    hotelname:{
         type: String,
         required: true
     },
-    password:{
+    address:{
+        type: String,
+        required: true
+    },
+    menu:{
         type: String,
         required: true
     },

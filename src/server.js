@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const user = require('./routers/user.js');
-const db ="mongodb+srv://kowshitha:kowshi@cluster0.cs1vo.mongodb.net/rest?retryWrites=true&w=majority";
+const db ="mongodb+srv://kowshitha:kowshi@cluster0.cs1vo.mongodb.net/hotel?retryWrites=true&w=majority";
 const port = 5000;
 const app = express();
 app.use(express.json())
